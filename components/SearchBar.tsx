@@ -1,17 +1,30 @@
 // components/SearchBar.tsx
+"use client"
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const SearchBar = () => {
+  const [term, setTerm] = useState("");
+  const router = useRouter();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!term.trim()) return;
+    router.push(`/products?query=${encodeURIComponent(term.trim())}`);
+  };
+
   return (
     <div className="flex w-full max-w-2xl">
-      <form className="flex w-full items-center">
+      <form className="flex w-full items-center" onSubmit={handleSubmit}>
         {/* INPUT WYSZUKIWANIA */}
         <div className="relative flex-1">
           <input
             type="text"
             placeholder="czego szukasz?"
             className="h-12 w-full rounded-l-md border-2 border-r-0 border-gray-400 bg-white px-4 text-base text-gray-900 placeholder-gray-500 focus:border-orange-500 focus:outline-none"
+            value={term}
+            onChange={(e) => setTerm(e.target.value)}
           />
-          
           {/* Ikona aparatu/rozpoznawania obrazu */}
           <button
             type="button"
