@@ -1,3 +1,4 @@
+// components/ui/ProductCardListing.tsx
 import { Product } from '@/types/product';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,12 +9,17 @@ interface ProductCardListingProps {
 
 const ProductCardListing = ({ product }: ProductCardListingProps) => {
   return (
-    <Link 
-      href={`/product/${product.id}`} 
-      className="block border border-gray-200 bg-white rounded-lg p-4 hover:shadow transition"
+    <Link
+      href={`/product/${product.id}`}
+      className="flex bg-gray-900 text-white rounded-lg overflow-hidden"
     >
-      {/* Obrazek */}
-      <div className="relative w-full h-44 mb-4 bg-gray-50 rounded">
+      {/* LEWA: Obrazek + SMART! */}
+      <div className="relative w-48 h-48 bg-gray-800 flex-shrink-0">
+        {product.isSmart && (
+          <div className="absolute top-2 left-2 bg-orange-500 text-xs font-bold uppercase px-2 py-1 rounded">
+            SMART!
+          </div>
+        )}
         <Image
           src={product.imageUrl}
           alt={product.name}
@@ -22,47 +28,77 @@ const ProductCardListing = ({ product }: ProductCardListingProps) => {
         />
       </div>
 
-      {/* Nazwa produktu */}
-      <h2 className="text-sm font-medium text-gray-900 leading-snug line-clamp-2 mb-1">
-        {product.name}
-      </h2>
+      {/* ŚRODEK: Opis */}
+      <div className="flex-1 px-4 py-3 space-y-1 text-sm">
+        {/* Promowane + info */}
+        <div className="flex items-center gap-1 text-xs text-gray-400">
+          <span className="uppercase">Promowane</span>
+          <span className="text-xs">ℹ️</span>
+        </div>
 
-      {/* Cena */}
-      <div className="text-base font-bold text-black mb-1">
-        {product.price.toFixed(2)} zł
+        {/* Nazwa */}
+        <h2 className="text-lg font-medium leading-snug">
+          {product.name}
+        </h2>
+
+        {/* Rating */}
+        <div className="flex items-center gap-1 text-sm">
+          <span>{product.rating.toFixed(1)}</span>
+          <span className="text-gray-400">({product.reviewCount})</span>
+        </div>
+
+        {/* Cechy (np. Darmowa dostawa) */}
+        {product.features?.length > 0 && (
+          <div className="flex flex-wrap gap-2 text-xs text-green-400">
+            {product.features.map((f, i) => (
+              <span key={i}>✓ {f}</span>
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* Poprzednia cena + info o obniżce */}
-      {product.originalPrice && (
-        <div className="text-xs text-gray-500 line-through">
-          {product.originalPrice.toFixed(2)} zł
-        </div>
-      )}
-      {product.hasSmartPrice && (
-        <div className="text-xs text-orange-600 mb-2">
-          najniższa cena z 30 dni przed obniżką
-        </div>
-      )}
+      {/* PRAWA: Cena + akcje */}
+      <div className="flex-shrink-0 w-64 p-4 flex flex-col justify-between">
+        <div>
+          {/* Cena */}
+          <div className="text-3xl font-bold leading-tight">
+            {product.price.toLocaleString('pl-PL', {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })} zł{' '}
+            {product.isSmart && (
+              <span className="text-base font-normal">SMART!</span>
+            )}
+          </div>
 
-      {/* Ocena */}
-      <div className="text-sm text-gray-700 mb-1">
-        {product.rating} <span className="text-gray-400">({product.reviewCount})</span>
+          {/* SmartPrice info */}
+          {product.hasSmartPrice && (
+            <div className="text-xs text-orange-600 mt-1">
+              najniższa cena z 30 dni przed obniżką
+            </div>
+          )}
+
+          {/* Dostawa */}
+          <div className="text-xs text-green-400 mt-1">
+            {product.deliveryInfo}
+          </div>
+        </div>
+
+        {/* Dodaj do koszyka + ulubione */}
+        <div className="flex items-center gap-2 mt-4">
+          <button className="flex-1 bg-orange-500 text-white py-2 rounded text-sm font-semibold hover:bg-orange-600 transition">
+            Dodaj do koszyka
+          </button>
+          <button className="p-2 border border-gray-700 rounded hover:bg-gray-800 transition">
+            ❤️
+          </button>
+        </div>
+
+        {/* Sprzedawca */}
+        <div className="text-xs text-gray-400 mt-3">
+          {product.seller}
+        </div>
       </div>
-
-      {/* Dostawa */}
-      <div className="text-xs text-gray-600">{product.deliveryInfo}</div>
-
-      {/* Zielone cechy */}
-      {product.features && product.features.length > 0 && (
-        <div className="text-xs text-green-600 font-medium">
-          {product.features.slice(0, 2).map((feature, idx) => (
-            <div key={idx}>✓ {feature}</div>
-          ))}
-        </div>
-      )}
-
-      {/* Sprzedawca */}
-      <div className="text-xs text-gray-500 mt-1">{product.seller}</div>
     </Link>
   );
 };
