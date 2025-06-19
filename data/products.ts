@@ -136,6 +136,19 @@ export const products: Product[] = [
     deliveryInfo: 'dostawa we wtorek',
     seller: 'camping-expert',
     features: ['Darmowa dostawa']
+  },
+  {
+    id: 11,
+    name: 'IPHONE 16',
+    price: 5200.00,
+    imageUrl: 'https://placehold.co/300x300/CD853F/333?text=IPHONE',
+    rating: 5.0,
+    reviewCount: 453,
+    isSmart: false,
+    hasSmartPrice: true,
+    deliveryInfo: 'dostawa we wtorek',
+    seller: 'camping-expert',
+    features: ['Darmowa dostawa']
   }
 ];
 
