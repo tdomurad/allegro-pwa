@@ -21,7 +21,7 @@ export default function ProductPage({ params }: PageProps) {
   }
 
   // znajdź kategorię tego produktu
-  const category = categories.find((c) => c.id === product.categoryId);
+  const category = categories.find((c) => c.id === product.categoryID);
   const categoryName = category?.name ?? "Wszystkie";
 
   return (
