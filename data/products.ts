@@ -14,7 +14,8 @@ export const products: Product[] = [
     deliveryInfo: 'dostawa we wtorek',
     seller: 'dom-ogrod-24',
     discount: 38,
-    features: ['Darmowa dostawa', 'Zwrot do 30 dni']
+    features: ['Darmowa dostawa', 'Zwrot do 30 dni'],
+    categoryID: 3
   },
   {
     id: 2,
@@ -27,7 +28,8 @@ export const products: Product[] = [
     hasSmartPrice: true,
     deliveryInfo: 'dostawa we wtorek',
     seller: 'piknik-expert',
-    features: ['Darmowa dostawa']
+    features: ['Darmowa dostawa'],
+    categoryID: 6
   },
   {
     id: 3,
@@ -42,7 +44,8 @@ export const products: Product[] = [
     deliveryInfo: 'dostawa we wtorek',
     seller: 'ceramika-polska',
     discount: 39,
-    features: ['Gwarancja najniższej ceny']
+    features: ['Gwarancja najniższej ceny'],
+    categoryID: 3
   },
   {
     id: 4,
@@ -55,7 +58,8 @@ export const products: Product[] = [
     hasSmartPrice: true,
     deliveryInfo: 'dostawa we wtorek',
     seller: 'kuchnia-akcesoria',
-    features: ['Darmowa dostawa']
+    features: ['Darmowa dostawa'],
+    categoryID: 3
   },
   {
     id: 5,
@@ -68,7 +72,8 @@ export const products: Product[] = [
     hasSmartPrice: true,
     deliveryInfo: 'dostawa we wtorek',
     seller: 'hiszpania-import',
-    features: ['Darmowa dostawa']
+    features: ['Darmowa dostawa'],
+    categoryID: 4
   },
   {
     id: 6,
@@ -81,7 +86,8 @@ export const products: Product[] = [
     hasSmartPrice: true,
     deliveryInfo: 'dostawa we wtorek',
     seller: 'basen-akcesoria',
-    features: ['Darmowa dostawa']
+    features: ['Darmowa dostawa'],
+    categoryID: 3
   },
   {
     id: 7,
@@ -94,7 +100,8 @@ export const products: Product[] = [
     hasSmartPrice: true,
     deliveryInfo: 'dostawa we wtorek',
     seller: 'elektro-mobilność',
-    features: ['Bezpłatna dostawa i zwrot']
+    features: ['Bezpłatna dostawa i zwrot'],
+    categoryID: 5
   },
   {
     id: 8,
@@ -109,7 +116,8 @@ export const products: Product[] = [
     deliveryInfo: 'dostawa we wtorek',
     seller: 'ogród-solar',
     discount: 29,
-    features: ['Darmowa dostawa']
+    features: ['Darmowa dostawa'],
+    categoryID: 3
   },
   {
     id: 9,
@@ -122,7 +130,8 @@ export const products: Product[] = [
     hasSmartPrice: true,
     deliveryInfo: 'dostawa we wtorek',
     seller: 'meble-ogrodowe',
-    features: ['Darmowa dostawa']
+    features: ['Darmowa dostawa'],
+    categoryID: 3
   },
   {
     id: 10,
@@ -135,7 +144,8 @@ export const products: Product[] = [
     hasSmartPrice: true,
     deliveryInfo: 'dostawa we wtorek',
     seller: 'camping-expert',
-    features: ['Darmowa dostawa']
+    features: ['Darmowa dostawa'],
+    categoryID: 3
   },
   {
     id: 11,
@@ -144,11 +154,12 @@ export const products: Product[] = [
     imageUrl: 'https://placehold.co/300x300/CD853F/333?text=IPHONE',
     rating: 5.0,
     reviewCount: 453,
-    isSmart: false,
+    isSmart: true,
     hasSmartPrice: true,
     deliveryInfo: 'dostawa we wtorek',
     seller: 'camping-expert',
-    features: ['Darmowa dostawa']
+    features: ['Darmowa dostawa'],
+    categoryID: 5
   }
 ];
 
