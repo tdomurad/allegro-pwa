@@ -1,10 +1,13 @@
 import Header from "@/components/layout/Header";
+import ProductGrid from "@/components/ProductGrid";
 
 export default function Home() {
   return (
-    <main>
+    <div className="bg-gray-50">
       <Header />
-      {/* Tutaj w przyszłości pojawi się reszta strony głównej */}
-    </main>
+      <main className="p-4 sm:p-6 lg:p-8">
+        <ProductGrid />
+      </main>
+    </div>
   );
 }
