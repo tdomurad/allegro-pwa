@@ -1,33 +1,53 @@
-// app/products/page.tsx
-"use client"
+"use client";
+
 import { useSearchParams } from "next/navigation";
+import SearchBar from "@/components/SearchBar";
+import SidebarFilters from "@/components/SidebarFilters";
+import SortDropdown from "@/components/SortDropdown";
+import ProductCardListing from "@/components/ui/ProductCardListing";
 import { products } from "@/data/products";
-import ProductCard from "@/components/ui/ProductCard";
+import Header from "@/components/layout/Header";
 
 export default function ProductsPage() {
   const searchParams = useSearchParams();
   const query = searchParams.get("query")?.toLowerCase() || "";
 
-  // Filtrowanie produktów po tytule
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(query)
+  // filtrowanie po tytule
+  const filtered = products.filter(p =>
+    p.name.toLowerCase().includes(query)
   );
 
   return (
-    <div className="bg-white min-h-screen">
-      <main className="px-4 sm:px-6 lg:px-8 py-8">
-        {query && (
-          <h1 className="text-2xl font-bold mb-6">
-            Szukasz „{query}” ({filteredProducts.length} wyników)
-          </h1>
-        )}
+    <div className="bg-gray-100 min-h-screen">
+      <div className="bg-gray-50">
+      <Header />
+      </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+      <div className="max-w-screen-xl mx-auto px-4 py-6 grid grid-cols-[250px_1fr] gap-6">
+
+        <SidebarFilters />
+
+        <div className="space-y-4">
+          <div className="flex justify-between items-center bg-gray-900 text-white px-4 py-2 rounded">
+            <div className="text-sm">
+              Szukasz „{query}” ({filtered.length} wyników)
+            </div>
+            <SortDropdown />
+          </div>
+
+          <div className="space-y-4">
+            {filtered.map(product => (
+              <ProductCardListing key={product.id} product={product} />
+            ))}
+          </div>
+
+          <div className="flex justify-center items-center gap-4 text-sm">
+            <button className="px-3 py-1 border rounded">‹</button>
+            <span>1 z 10</span>
+            <button className="px-3 py-1 border rounded">›</button>
+          </div>
         </div>
-      </main>
+      </div>
     </div>
   );
 }
