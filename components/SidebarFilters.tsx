@@ -1,6 +1,6 @@
 export default function SidebarFilters() {
   return (
-    <aside className="space-y-6 sticky top-20">
+    <aside className="space-y-6">
       <div className="space-y-2">
         <h3 className="text-sm font-semibold">Darmowa dostawa i zwrot</h3>
         <label className="flex items-center gap-2 text-sm">
@@ -17,5 +17,5 @@ export default function SidebarFilters() {
         </label>
       </div>
     </aside>
-  );
+);
 }
