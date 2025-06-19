@@ -12,6 +12,7 @@ export interface Product {
   seller: string;
   discount?: number;
   features?: string[];
+  categoryID: Category["id"]
 }
 
 export interface Category {
