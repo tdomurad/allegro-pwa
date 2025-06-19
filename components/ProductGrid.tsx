@@ -1,5 +1,5 @@
-import { products } from '../data/products';
-import ProductCard from './ui/ProductCard';
+import { products } from '@/data/products';
+import ProductCard from '@/components/ui/ProductCard';
 
 const ProductGrid = () => {
   return (
@@ -14,11 +14,18 @@ const ProductGrid = () => {
         </button>
       </div>
       
-      {/* Products Grid */}
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+      {/* Products Horizontal Scroll */}
+      <div className="relative">
+        <div className="flex gap-4 overflow-x-auto scrollbar-hide horizontal-scroll pb-4 px-1">
+          {products.map((product) => (
+            <div key={product.id} className="flex-shrink-0 w-56 sm:w-64">
+              <ProductCard product={product} />
+            </div>
+          ))}
+        </div>
+        
+        {/* Gradient fade on the right */}
+        <div className="absolute right-0 top-0 bottom-4 w-12 bg-gradient-to-l from-gray-50 to-transparent pointer-events-none"></div>
       </div>
     </section>
   );

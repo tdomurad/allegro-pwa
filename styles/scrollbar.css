@@ -1,0 +1,40 @@
+/* Ukrycie scrollbara ale zachowanie funkcjonalności */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Smooth scrolling */
+.scrollbar-hide {
+  scroll-behavior: smooth;
+}
+
+/* Dodatkowe style dla lepszego UX */
+.horizontal-scroll {
+  scroll-snap-type: x mandatory;
+  scroll-padding: 16px;
+}
+
+.horizontal-scroll > * {
+  scroll-snap-align: start;
+}
+
+/* Wskaźniki przewijania (opcjonalne) */
+.scroll-indicator {
+  position: relative;
+}
+
+.scroll-indicator::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.8));
+  pointer-events: none;
+}
