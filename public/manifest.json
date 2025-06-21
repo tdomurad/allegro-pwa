@@ -1,0 +1,22 @@
+{
+  "name": "Allegro",
+  "short_name": "AllegroPWA",
+  "description": "Allegro – listing i karta produktu",
+  "lang": "pl-PL",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff6600",
+  "icons": [
+    {
+      "src": "/icons/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/logo_a.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

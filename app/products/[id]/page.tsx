@@ -1,15 +1,15 @@
-// app/product/[id]/page.tsx
+"use client";
+
+import { useParams } from "next/navigation";
 import { products, categories } from "@/data/products";
 import Header from "@/components/layout/Header";
 import Image from "next/image";
 import Link from "next/link";
 
-interface PageProps {
-  params: { id: string };
-}
-
-export default function ProductPage({ params }: PageProps) {
-  const productId = parseInt(params.id, 10);
+export default function Page() {
+  const params = useParams();
+  const id = params?.id as string;
+  const productId = parseInt(id, 10);
   const product = products.find((p) => p.id === productId);
 
   if (!product) {
@@ -20,21 +20,17 @@ export default function ProductPage({ params }: PageProps) {
     );
   }
 
-  // znajdź kategorię tego produktu
   const category = categories.find((c) => c.id === product.categoryID);
   const categoryName = category?.name ?? "Wszystkie";
 
   return (
     <div className="bg-gray-100 min-h-screen">
-      {/* globalny header */}
       <Header />
 
       <main className="max-w-screen-xl mx-auto px-4 py-6 space-y-6">
         {/* breadcrumb */}
         <nav className="text-sm text-gray-600">
-          <Link href="/" className="hover:underline">
-            Allegro
-          </Link>
+          <Link href="/">Allegro</Link>
           <span className="mx-2">/</span>
           <Link
             href={`/products?category=${encodeURIComponent(categoryName)}`}
@@ -44,7 +40,6 @@ export default function ProductPage({ params }: PageProps) {
           </Link>
         </nav>
 
-        {/* content: obrazek + panel */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* 1) Duży obrazek */}
           <div className="bg-white rounded-lg p-4 flex justify-center">
