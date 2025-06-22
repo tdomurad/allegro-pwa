@@ -10,6 +10,7 @@ export default function SortDropdown() {
             sortowanie
           </label>
           <select
+            aria-label="Sortowanie"
             className="h-8 bg-[#3a3a3d] border border-gray-600 text-sm pl-3 pr-8 rounded cursor-pointer"
             defaultValue="trafnosc"
           >
@@ -26,6 +27,7 @@ export default function SortDropdown() {
           ‹
         </button>
         <input
+          aria-label="Aktualny numer strony"
           type="text"
           readOnly
           value="1"
