@@ -9,7 +9,7 @@ const ProductGrid = () => {
         <h2 className="text-xl font-semibold text-gray-900">
           Jak wszystko na lato, to w niskich cenach
         </h2>
-        <button className="text-orange-500 hover:text-orange-600 font-medium text-sm">
+        <button aria-label="Zobacz więcej" className="text-orange-600 hover:text-orange-700 font-medium text-sm"> {/* Zmiana z text-orange-500 */}
           Zobacz więcej
         </button>
       </div>
@@ -17,9 +17,9 @@ const ProductGrid = () => {
       {/* Products Horizontal Scroll */}
       <div className="relative">
         <div className="flex gap-4 overflow-x-auto scrollbar-hide horizontal-scroll pb-4 px-1">
-          {products.map((product) => (
+          {products.map((product, index) => (
             <div key={product.id} className="flex-shrink-0 w-56 sm:w-64">
-              <ProductCard product={product} />
+              <ProductCard product={product} isPriority={index === 0} />
             </div>
           ))}
         </div>

@@ -24,28 +24,28 @@ const Header = () => {
         {/* IKONY PO PRAWEJ */}
         <div className="flex items-center gap-4">
           {/* Ikona lokalizacji/dostawy */}
-          <button className="flex items-center gap-2 text-white hover:text-orange-400">
+          <button aria-label="Dostawa" className="flex items-center gap-2 text-white hover:text-orange-400">
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.25 18.75a1.5 1.5 0 01-3 0V8.25a1.5 1.5 0 013 0v10.5zM12.75 18.75a1.5 1.5 0 01-3 0V9.75a1.5 1.5 0 013 0v9zM17.25 18.75a1.5 1.5 0 01-3 0V6.75a1.5 1.5 0 013 0v12z" />
             </svg>
           </button>
 
           {/* Ulubione */}
-          <button className="flex items-center gap-2 text-white hover:text-orange-400">
+          <button aria-label="Ulubione" className="flex items-center gap-2 text-white hover:text-orange-400">
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
             </svg>
           </button>
 
           {/* Powiadomienia/Wiadomości */}
-          <button className="flex items-center gap-2 text-white hover:text-orange-400">
+          <button aria-label="Powiadomienia" className="flex items-center gap-2 text-white hover:text-orange-400">
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
           </button>
 
           {/* Koszyk bez licznika */}
-          <button className="flex items-center gap-2 text-white hover:text-orange-400">
+          <button aria-label="Koszyk" className="flex items-center gap-2 text-white hover:text-orange-400">
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c.51 0 .962-.328 1.09-.834l1.5-6A1.125 1.125 0 0018 5.25H5.25L5.117 4.659A1.125 1.125 0 004.002 3.75H2.25" />
             </svg>
@@ -54,7 +54,7 @@ const Header = () => {
           {/* Moje Allegro - dla niezalogowanych */}
           <div className="flex items-center gap-2">
             <span className="text-white">Moje Allegro</span>
-            <button className="text-white hover:text-orange-400">
+            <button aria-label="Więcej" className="text-white hover:text-orange-400">
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>

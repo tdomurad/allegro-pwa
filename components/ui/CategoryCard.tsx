@@ -9,7 +9,7 @@ interface CategoryCardProps {
 const CategoryCard = ({ category }: CategoryCardProps) => {
   return (
     <Link 
-      href={`/category/${category.id}`} 
+      href={`/products`}
       className="block group flex-shrink-0"
     >
       <div className="flex flex-col items-center p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 w-20">
