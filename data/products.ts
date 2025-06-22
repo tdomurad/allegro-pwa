@@ -6,7 +6,7 @@ export const products: Product[] = [
     name: 'HAMAK OGRODOWY BRAZYLIJSKI PODUSZKA 200CM',
     price: 49.99,
     originalPrice: 79.99,
-    imageUrl: 'https://placehold.co/300x300/87CEEB/333?text=HAMAK',
+    imageUrl: 'https://picsum.photos/seed/hamak/300/300', // <-- ZMIANA
     rating: 4.8,
     reviewCount: 1245,
     isSmart: true,
@@ -21,7 +21,7 @@ export const products: Product[] = [
     id: 2,
     name: 'KOSZYK NA PIKNIK Z WIKLINY PREZENT KOSZ',
     price: 149.99,
-    imageUrl: 'https://placehold.co/300x300/DEB887/333?text=KOSZYK',
+    imageUrl: 'https://picsum.photos/seed/koszyk/300/300', // <-- ZMIANA
     rating: 4.7,
     reviewCount: 892,
     isSmart: true,
@@ -36,7 +36,7 @@ export const products: Product[] = [
     name: 'DONICZKA OSŁONKA BIAŁA CERAMICZNA 12CM',
     price: 55.00,
     originalPrice: 89.99,
-    imageUrl: 'https://placehold.co/300x300/F5F5F5/333?text=DONICZKA',
+    imageUrl: 'https://picsum.photos/seed/doniczka/300/300',
     rating: 4.9,
     reviewCount: 456,
     isSmart: true,
@@ -51,7 +51,7 @@ export const products: Product[] = [
     id: 4,
     name: 'ZESTAW FOREMEK SILIKONOWYCH LODY 6SZT',
     price: 34.00,
-    imageUrl: 'https://placehold.co/300x300/FFB6C1/333?text=FOREMKI',
+    imageUrl: 'https://picsum.photos/seed/foremki/300/300',
     rating: 4.8,
     reviewCount: 1123,
     isSmart: true,
@@ -65,7 +65,7 @@ export const products: Product[] = [
     id: 5,
     name: 'WACHLARZ HISZPAŃSKI PRZYCISK RAKIETA',
     price: 89.99,
-    imageUrl: 'https://placehold.co/300x300/FFD700/333?text=WACHLARZ',
+    imageUrl: 'https://picsum.photos/seed/wachlarz/300/300',
     rating: 4.6,
     reviewCount: 234,
     isSmart: true,
@@ -79,7 +79,7 @@ export const products: Product[] = [
     id: 6,
     name: 'MATERAC DMUCHANY DO PŁYWANIA AVOCADO',
     price: 48.85,
-    imageUrl: 'https://placehold.co/300x300/98FB98/333?text=MATERAC',
+    imageUrl: 'https://picsum.photos/seed/materac/300/300',
     rating: 4.9,
     reviewCount: 678,
     isSmart: true,
@@ -93,7 +93,7 @@ export const products: Product[] = [
     id: 7,
     name: 'HULAJNOGA ELEKTRYCZNA XIAOMI M365 PRO',
     price: 1290.00,
-    imageUrl: 'https://placehold.co/300x300/696969/333?text=HULAJNOGA',
+    imageUrl: 'https://picsum.photos/seed/hulajnoga/300/300',
     rating: 4.7,
     reviewCount: 1890,
     isSmart: true,
@@ -108,7 +108,7 @@ export const products: Product[] = [
     name: 'LAMPKA OGRODOWA SOLARNA LED 5M',
     price: 249.00,
     originalPrice: 349.99,
-    imageUrl: 'https://placehold.co/300x300/FFFF00/333?text=LAMPKA',
+    imageUrl: 'https://picsum.photos/seed/lampka/300/300',
     rating: 4.8,
     reviewCount: 567,
     isSmart: true,
@@ -123,7 +123,7 @@ export const products: Product[] = [
     id: 9,
     name: 'LEŻAK OGRODOWY ALUMINIUM SKŁADANY',
     price: 129.99,
-    imageUrl: 'https://placehold.co/300x300/8FBC8F/333?text=LEŻAK',
+    imageUrl: 'https://picsum.photos/seed/lezak/300/300',
     rating: 4.6,
     reviewCount: 345,
     isSmart: true,
@@ -137,7 +137,7 @@ export const products: Product[] = [
     id: 10,
     name: 'MISKA CAMPING ZESTAW TURYSTYCZNY',
     price: 45.00,
-    imageUrl: 'https://placehold.co/300x300/CD853F/333?text=MISKA',
+    imageUrl: 'https://picsum.photos/seed/miska/300/300',
     rating: 4.7,
     reviewCount: 456,
     isSmart: true,
@@ -151,7 +151,7 @@ export const products: Product[] = [
     id: 11,
     name: 'IPHONE 16',
     price: 5200.00,
-    imageUrl: 'https://placehold.co/300x300/CD853F/333?text=IPHONE',
+    imageUrl: 'https://picsum.photos/seed/iphone/300/300',
     rating: 5.0,
     reviewCount: 453,
     isSmart: true,
@@ -168,73 +168,73 @@ export const categories: Category[] = [
     id: 1,
     name: 'Dostawa już od 9 zł',
     icon: '📦',
-    imageUrl: 'https://placehold.co/100x100/4169E1/FFF?text=SMART',
+    imageUrl: 'https://picsum.photos/seed/box/100/100',
     isPromoted: true
   },
   {
     id: 2,
     name: 'Motoryzacja',
     icon: '🚗',
-    imageUrl: 'https://placehold.co/100x100/FF6347/FFF?text=AUTO'
+    imageUrl: 'https://picsum.photos/seed/car/100/100'
   },
   {
     id: 3,
     name: 'Dom i ogród',
     icon: '🏠',
-    imageUrl: 'https://placehold.co/100x100/32CD32/FFF?text=DOM'
+    imageUrl: 'https://picsum.photos/seed/garden/100/100'
   },
   {
     id: 4,
     name: 'Moda',
     icon: '👗',
-    imageUrl: 'https://placehold.co/100x100/FF69B4/FFF?text=MODA'
+    imageUrl: 'https://picsum.photos/seed/fashion/100/100'
   },
   {
     id: 5,
     name: 'Elektronika',
     icon: '💻',
-    imageUrl: 'https://placehold.co/100x100/1E90FF/FFF?text=TECH'
+    imageUrl: 'https://picsum.photos/seed/tech/100/100'
   },
   {
     id: 6,
     name: 'Sport i turystyka',
     icon: '⚽',
-    imageUrl: 'https://placehold.co/100x100/FF4500/FFF?text=SPORT'
+    imageUrl: 'https://picsum.photos/seed/sport/100/100'
   },
   {
     id: 7,
     name: 'Dziecko',
     icon: '🧸',
-    imageUrl: 'https://placehold.co/100x100/FFD700/FFF?text=DZIECI'
+    imageUrl: 'https://picsum.photos/seed/toys/100/100'
   },
   {
     id: 8,
     name: 'Supermarket',
     icon: '🛒',
-    imageUrl: 'https://placehold.co/100x100/8A2BE2/FFF?text=MARKET'
+    imageUrl: 'https://picsum.photos/seed/grocery/100/100'
   },
   {
     id: 9,
     name: 'Zdrowie',
     icon: '💊',
-    imageUrl: 'https://placehold.co/100x100/00CED1/FFF?text=ZDROWIE'
+    imageUrl: 'https://picsum.photos/seed/health/100/100'
   },
   {
     id: 10,
     name: 'Kolekcje i sztuka',
     icon: '🎨',
-    imageUrl: 'https://placehold.co/100x100/DA70D6/FFF?text=SZTUKA'
+    imageUrl: 'https://picsum.photos/seed/art/100/100'
   },
   {
     id: 11,
     name: 'Uroda',
     icon: '💄',
-    imageUrl: 'https://placehold.co/100x100/FF1493/FFF?text=URODA'
+    imageUrl: 'https://picsum.photos/seed/cosmetics/100/100'
   },
   {
     id: 12,
     name: 'Firma i usługi',
     icon: '🏢',
-    imageUrl: 'https://placehold.co/100x100/708090/FFF?text=FIRMA'
+    imageUrl: 'https://picsum.photos/seed/office/100/100'
   }
 ];
